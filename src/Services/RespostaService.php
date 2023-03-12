@@ -29,9 +29,10 @@ class RespostaService
   {
     try {
       $repository = new RespostaRepository();
+      $dados = $repository->getByCdParticipante($cd_participante);
       $retorno["ok"] = true;
-      $retorno["dados"] = $repository->getByCdParticipante($cd_participante);
-      $retorno["message"] = "Resposta salva com sucesso";
+      $retorno["dados"] = $dados;
+      $retorno["message"] = sizeof($dados) > 0 ? "Consulta realizada com sucesso." : "Consulta realizada com sucesso, porém não retornou nenhum dado.";
       return $retorno;
     } catch (\Exception $e) {
       $retorno["ok"] = false;
