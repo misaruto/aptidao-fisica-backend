@@ -1,0 +1,20 @@
+{
+    "name": "misael/aptidao-fisica-backend",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "AptidaoFisicaBackend\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "MISAEL GUILHARDES DE FREITAS",
+            "email": "misaelg.freitas2000@gmail.com"
+        }
+    ],
+    "require": {
+        "slim/psr7": "^1.6",
+        "slim/slim": "4.*",
+        "symfony/serializer": "^6.2"
+    }
+}
